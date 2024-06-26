@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-)df$=!nf0oc4#op=%=wn9q=r!it#r2w=#w%_hywo&80b)_7&^+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://localhost:8000', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -83,9 +83,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'smp',
         'USER': 'postgres',
-        'PASSWORD': '12345',
+        'PASSWORD': '1234567',
         'host': 'localhost',
-        'port': ''
+        'port': '5432'
     }
 }
 
